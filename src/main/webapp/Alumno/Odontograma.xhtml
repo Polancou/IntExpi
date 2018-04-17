@@ -4,898 +4,623 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <body>
 
-        <ui:composition template="./ExpiTemplate.xhtml">
-            <ui:define name="content">
-                <style>
-                    path:hover { 
-                        fill: #e57373;
-                    }
-                    .panelGridCenter {
-                        margin: 0 auto;
-                    }
-                </style>
-                <p:panel header="Control de placa dentobacteriana">
-                    <p:panelGrid columns="16" class="panelGridCenter">
-                        <h:outputLabel value="18"/>
-                        <h:outputLabel value="17"/>
-                        <h:outputLabel value="16"/>
-                        <h:outputLabel value="15"/>
-                        <h:outputLabel value="14"/>
-                        <h:outputLabel value="13"/>
-                        <h:outputLabel value="12"/>
-                        <h:outputLabel value="11"/>
-                        <h:outputLabel value="21"/>
-                        <h:outputLabel value="22"/>
-                        <h:outputLabel value="23"/>
-                        <h:outputLabel value="24"/>
-                        <h:outputLabel value="25"/>
-                        <h:outputLabel value="26"/>
-                        <h:outputLabel value="27"/>
-                        <h:outputLabel value="28"/>
+    <p:panel header="Control de placa dentobacteriana">
+        <h:outputStylesheet library="css" name="odontograma.css"/>
+        <h:outputScript library="js" name="odontograma.js"/>
+        
+        <h:panelGrid columns="2" cellpadding="5">
+            <p:outputLabel value="Total de dientes: "/>
+            <p:inputNumber id="Num_dientes" value=""/>
 
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="18-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val18').attr('id'))" fill="#ffffff"/>
-                                    <path id="18-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val18').attr('id'))" fill="#ffffff"/>
-                                    <path id="18-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val18').attr('id'))" fill="#ffffff"/>
-                                    <path id="18-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val18').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="17-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val17').attr('id'))" fill="#ffffff"/>
-                                    <path id="17-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val17').attr('id'))" fill="#ffffff"/>
-                                    <path id="17-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val17').attr('id'))" fill="#ffffff"/>
-                                    <path id="17-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val17').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="16-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val16').attr('id'))" fill="#ffffff"/>
-                                    <path id="16-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val16').attr('id'))" fill="#ffffff"/>
-                                    <path id="16-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val16').attr('id'))" fill="#ffffff"/>
-                                    <path id="16-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val16').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="15-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val15').attr('id'))" fill="#ffffff"/>
-                                    <path id="15-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val15').attr('id'))" fill="#ffffff"/>
-                                    <path id="15-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val15').attr('id'))" fill="#ffffff"/>
-                                    <path id="15-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val15').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="14-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val14').attr('id'))" fill="#ffffff"/>
-                                    <path id="14-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val14').attr('id'))" fill="#ffffff"/>
-                                    <path id="14-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#izq_val14').attr('id'))" fill="#ffffff"/>
-                                    <path id="14-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val14').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="13-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val13').attr('id'))" fill="#ffffff"/>
-                                    <path id="13-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val13').attr('id'))" fill="#ffffff"/>
-                                    <path id="13-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val13').attr('id'))" fill="#ffffff"/>
-                                    <path id="13-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val13').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="12-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val12').attr('id'))" fill="#ffffff"/>
-                                    <path id="12-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val12').attr('id'))" fill="#ffffff"/>
-                                    <path id="12-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val12').attr('id'))" fill="#ffffff"/>
-                                    <path id="12-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val12').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="11-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val11').attr('id'))" fill="#ffffff"/>
-                                    <path id="11-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val11').attr('id'))" fill="#ffffff"/>
-                                    <path id="11-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val11').attr('id'))" fill="#ffffff"/>
-                                    <path id="11-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val11').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="21-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val21').attr('id'))" fill="#ffffff"/>
-                                    <path id="21-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val21').attr('id'))" fill="#ffffff"/>
-                                    <path id="21-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val21').attr('id'))" fill="#ffffff"/>
-                                    <path id="21-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val21').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="22-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val22').attr('id'))" fill="#ffffff"/>
-                                    <path id="22-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val22').attr('id'))" fill="#ffffff"/>
-                                    <path id="22-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val22').attr('id'))" fill="#ffffff"/>
-                                    <path id="22-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val22').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="23-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val23').attr('id'))" fill="#ffffff"/>
-                                    <path id="23-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val23').attr('id'))" fill="#ffffff"/>
-                                    <path id="23-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val23').attr('id'))" fill="#ffffff"/>
-                                    <path id="23-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val23').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="24-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val24').attr('id'))" fill="#ffffff"/>
-                                    <path id="24-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val24').attr('id'))" fill="#ffffff"/>
-                                    <path id="24-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val24').attr('id'))" fill="#ffffff"/>
-                                    <path id="24-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val24').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="25-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val25').attr('id'))" fill="#ffffff"/>
-                                    <path id="25-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val25').attr('id'))" fill="#ffffff"/>
-                                    <path id="25-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val25').attr('id'))" fill="#ffffff"/>
-                                    <path id="25-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#izq_val25').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="26-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val26').attr('id'))" fill="#ffffff"/>
-                                    <path id="26-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val26').attr('id'))" fill="#ffffff"/>
-                                    <path id="26-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val26').attr('id'))" fill="#ffffff"/>
-                                    <path id="26-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val26').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="27-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val27').attr('id'))" fill="#ffffff"/>
-                                    <path id="27-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val27').attr('id'))" fill="#ffffff"/>
-                                    <path id="27-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val27').attr('id'))" fill="#ffffff"/>
-                                    <path id="27-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val27').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="28-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val28').attr('id'))" fill="#ffffff"/>
-                                    <path id="28-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val28').attr('id'))" fill="#ffffff"/>
-                                    <path id="28-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val28').attr('id'))" fill="#ffffff"/>
-                                    <path id="28-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val28').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                    </p:panelGrid>
-                    
-                    <p:spacer/>
-                    
-                    <p:panelGrid columns="10" class="panelGridCenter">
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="55-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val55').attr('id'))" fill="#ffffff"/>
-                                    <path id="55-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val55').attr('id'))" fill="#ffffff"/>
-                                    <path id="55-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val55').attr('id'))" fill="#ffffff"/>
-                                    <path id="55-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val55').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="54-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val54').attr('id'))" fill="#ffffff"/>
-                                    <path id="54-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val54').attr('id'))" fill="#ffffff"/>
-                                    <path id="54-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val54').attr('id'))" fill="#ffffff"/>
-                                    <path id="54-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val54').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="53-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val53').attr('id'))" fill="#ffffff"/>
-                                    <path id="53-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val53').attr('id'))" fill="#ffffff"/>
-                                    <path id="53-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val53').attr('id'))" fill="#ffffff"/>
-                                    <path id="53-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val53').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="52-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val52').attr('id'))" fill="#ffffff"/>
-                                    <path id="52-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val52').attr('id'))" fill="#ffffff"/>
-                                    <path id="52-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val52').attr('id'))" fill="#ffffff"/>
-                                    <path id="52-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val52').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="51-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val51').attr('id'))" fill="#ffffff"/>
-                                    <path id="51-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val51').attr('id'))" fill="#ffffff"/>
-                                    <path id="51-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val51').attr('id'))" fill="#ffffff"/>
-                                    <path id="51-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val51').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="61-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val61').attr('id'))" fill="#ffffff"/>
-                                    <path id="61-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val61').attr('id'))" fill="#ffffff"/>
-                                    <path id="61-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val61').attr('id'))" fill="#ffffff"/>
-                                    <path id="61-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val61').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="62-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val62').attr('id'))" fill="#ffffff"/>
-                                    <path id="62-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val62').attr('id'))" fill="#ffffff"/>
-                                    <path id="62-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val62').attr('id'))" fill="#ffffff"/>
-                                    <path id="62-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val62').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="63-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val63').attr('id'))" fill="#ffffff"/>
-                                    <path id="63-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val63').attr('id'))" fill="#ffffff"/>
-                                    <path id="63-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val63').attr('id'))" fill="#ffffff"/>
-                                    <path id="63-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val63').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="64-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val64').attr('id'))" fill="#ffffff"/>
-                                    <path id="64-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val64').attr('id'))" fill="#ffffff"/>
-                                    <path id="64-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val64').attr('id'))" fill="#ffffff"/>
-                                    <path id="64-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val64').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="65-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val65').attr('id'))" fill="#ffffff"/>
-                                    <path id="65-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val65').attr('id'))" fill="#ffffff"/>
-                                    <path id="65-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val65').attr('id'))" fill="#ffffff"/>
-                                    <path id="65-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val65').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        
-                        <h:outputLabel value="55"/>
-                        <h:outputLabel value="54"/>
-                        <h:outputLabel value="53"/>
-                        <h:outputLabel value="52"/>
-                        <h:outputLabel value="51"/>
-                        <h:outputLabel value="61"/>
-                        <h:outputLabel value="62"/>
-                        <h:outputLabel value="63"/>
-                        <h:outputLabel value="64"/>
-                        <h:outputLabel value="65"/>
-                    </p:panelGrid>
-                    
-                    <p:spacer/>
-                    
-                    <p:panelGrid columns="10" class="panelGridCenter">
-                        <h:outputLabel value="85"/>
-                        <h:outputLabel value="84"/>
-                        <h:outputLabel value="83"/>
-                        <h:outputLabel value="82"/>
-                        <h:outputLabel value="81"/>
-                        <h:outputLabel value="71"/>
-                        <h:outputLabel value="72"/>
-                        <h:outputLabel value="73"/>
-                        <h:outputLabel value="74"/>
-                        <h:outputLabel value="75"/>
-                        
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="85-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val85').attr('id'))" fill="#ffffff"/>
-                                    <path id="85-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val85').attr('id'))" fill="#ffffff"/>
-                                    <path id="85-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val85').attr('id'))" fill="#ffffff"/>
-                                    <path id="85-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val85').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="84-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val84').attr('id'))" fill="#ffffff"/>
-                                    <path id="84-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val84').attr('id'))" fill="#ffffff"/>
-                                    <path id="84-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val84').attr('id'))" fill="#ffffff"/>
-                                    <path id="84-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val84').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="83-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val83').attr('id'))" fill="#ffffff"/>
-                                    <path id="83-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val83').attr('id'))" fill="#ffffff"/>
-                                    <path id="83-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val83').attr('id'))" fill="#ffffff"/>
-                                    <path id="83-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val83').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="82-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val82').attr('id'))" fill="#ffffff"/>
-                                    <path id="82-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val82').attr('id'))" fill="#ffffff"/>
-                                    <path id="82-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val82').attr('id'))" fill="#ffffff"/>
-                                    <path id="82-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val82').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="81-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val81').attr('id'))" fill="#ffffff"/>
-                                    <path id="81-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val81').attr('id'))" fill="#ffffff"/>
-                                    <path id="81-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val81').attr('id'))" fill="#ffffff"/>
-                                    <path id="81-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val81').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="71-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val71').attr('id'))" fill="#ffffff"/>
-                                    <path id="71-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val71').attr('id'))" fill="#ffffff"/>
-                                    <path id="71-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val71').attr('id'))" fill="#ffffff"/>
-                                    <path id="71-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val71').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="72-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val72').attr('id'))" fill="#ffffff"/>
-                                    <path id="72-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val72').attr('id'))" fill="#ffffff"/>
-                                    <path id="72-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val72').attr('id'))" fill="#ffffff"/>
-                                    <path id="72-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val72').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="73-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val73').attr('id'))" fill="#ffffff"/>
-                                    <path id="73-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val73').attr('id'))" fill="#ffffff"/>
-                                    <path id="73-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val73').attr('id'))" fill="#ffffff"/>
-                                    <path id="73-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val73').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="74-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val74').attr('id'))" fill="#ffffff"/>
-                                    <path id="74-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val74').attr('id'))" fill="#ffffff"/>
-                                    <path id="74-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val74').attr('id'))" fill="#ffffff"/>
-                                    <path id="74-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val74').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="75-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val75').attr('id'))" fill="#ffffff"/>
-                                    <path id="75-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val75').attr('id'))" fill="#ffffff"/>
-                                    <path id="75-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val75').attr('id'))" fill="#ffffff"/>
-                                    <path id="75-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val75').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                    </p:panelGrid>
+            <p:outputLabel value="Número de superficies con placa"/>
+            <p:inputNumber id="Superfices_placa" value=""/>
 
-                    <p:spacer/>
-                    
-                    <p:panelGrid columns="16" class="panelGridCenter">
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="48-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val48').attr('id'))" fill="#ffffff"/>
-                                    <path id="48-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val48').attr('id'))" fill="#ffffff"/>
-                                    <path id="48-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val48').attr('id'))" fill="#ffffff"/>
-                                    <path id="48-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val48').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="47-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val47').attr('id'))" fill="#ffffff"/>
-                                    <path id="47-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val47').attr('id'))" fill="#ffffff"/>
-                                    <path id="47-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val47').attr('id'))" fill="#ffffff"/>
-                                    <path id="47-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val47').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="46-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val46').attr('id'))" fill="#ffffff"/>
-                                    <path id="46-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val46').attr('id'))" fill="#ffffff"/>
-                                    <path id="46-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val46').attr('id'))" fill="#ffffff"/>
-                                    <path id="46-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val46').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="45-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val45').attr('id'))" fill="#ffffff"/>
-                                    <path id="45-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val45').attr('id'))" fill="#ffffff"/>
-                                    <path id="45-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val45').attr('id'))" fill="#ffffff"/>
-                                    <path id="45-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val45').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="44-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_va44').attr('id'))" fill="#ffffff"/>
-                                    <path id="44-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val44').attr('id'))" fill="#ffffff"/>
-                                    <path id="44-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val44').attr('id'))" fill="#ffffff"/>
-                                    <path id="44-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val44').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="43-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val43').attr('id'))" fill="#ffffff"/>
-                                    <path id="43-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val43').attr('id'))" fill="#ffffff"/>
-                                    <path id="43-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val43').attr('id'))" fill="#ffffff"/>
-                                    <path id="43-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val43').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="42-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val42').attr('id'))" fill="#ffffff"/>
-                                    <path id="42-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val42').attr('id'))" fill="#ffffff"/>
-                                    <path id="42-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val42').attr('id'))" fill="#ffffff"/>
-                                    <path id="42-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val42').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="41-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val41').attr('id'))" fill="#ffffff"/>
-                                    <path id="41-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val41').attr('id'))" fill="#ffffff"/>
-                                    <path id="41-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val41').attr('id'))" fill="#ffffff"/>
-                                    <path id="41-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val41').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="31-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val31').attr('id'))" fill="#ffffff"/>
-                                    <path id="31-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val31').attr('id'))" fill="#ffffff"/>
-                                    <path id="31-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val31').attr('id'))" fill="#ffffff"/>
-                                    <path id="31-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val31').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="32-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val32').attr('id'))" fill="#ffffff"/>
-                                    <path id="32-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val32').attr('id'))" fill="#ffffff"/>
-                                    <path id="32-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val32').attr('id'))" fill="#ffffff"/>
-                                    <path id="32-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val32').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="33-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val33').attr('id'))" fill="#ffffff"/>
-                                    <path id="33-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val33').attr('id'))" fill="#ffffff"/>
-                                    <path id="33-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val33').attr('id'))" fill="#ffffff"/>
-                                    <path id="33-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val33').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="34-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val34').attr('id'))" fill="#ffffff"/>
-                                    <path id="34-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val34').attr('id'))" fill="#ffffff"/>
-                                    <path id="34-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val34').attr('id'))" fill="#ffffff"/>
-                                    <path id="34-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val34').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="35-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val35').attr('id'))" fill="#ffffff"/>
-                                    <path id="35-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val35').attr('id'))" fill="#ffffff"/>
-                                    <path id="35-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val35').attr('id'))" fill="#ffffff"/>
-                                    <path id="35-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#izq_val35').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="36-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val36').attr('id'))" fill="#ffffff"/>
-                                    <path id="36-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val36').attr('id'))" fill="#ffffff"/>
-                                    <path id="36-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val36').attr('id'))" fill="#ffffff"/>
-                                    <path id="36-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val36').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="37-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val37').attr('id'))" fill="#ffffff"/>
-                                    <path id="37-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val37').attr('id'))" fill="#ffffff"/>
-                                    <path id="37-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val37').attr('id'))" fill="#ffffff"/>
-                                    <path id="37-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val37').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        <h:panelGrid>
-                            <svg width="50" height="50" viewBox="0 0 200 200">
-                                <g transform="translate(100,100)" stroke="#000" stroke-width="2">
-                                    <path id="38-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id, $('#izq_val38').attr('id'))" fill="#ffffff"/>
-                                    <path id="38-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id, $('#sup_val38').attr('id'))" fill="#ffffff"/>
-                                    <path id="38-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id, $('#der_val38').attr('id'))" fill="#ffffff"/>
-                                    <path id="38-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id, $('#inf_val38').attr('id'))" fill="#ffffff"/>
-                                </g>
-                            </svg>
-                        </h:panelGrid>
-                        
-                        
-                        <h:outputLabel value="48"/>
-                        <h:outputLabel value="47"/>
-                        <h:outputLabel value="46"/>
-                        <h:outputLabel value="45"/>
-                        <h:outputLabel value="44"/>
-                        <h:outputLabel value="43"/>
-                        <h:outputLabel value="42"/>
-                        <h:outputLabel value="31"/>
-                        <h:outputLabel value="31"/>
-                        <h:outputLabel value="32"/>
-                        <h:outputLabel value="33"/>
-                        <h:outputLabel value="34"/>
-                        <h:outputLabel value="35"/>
-                        <h:outputLabel value="36"/>
-                        <h:outputLabel value="37"/>
-                        <h:outputLabel value="38"/>
-                    </p:panelGrid>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <h:inputHidden id="izq_val18" value="#ffffff"/>
-                    <h:inputHidden id="sup_val18" value="#ffffff"/>
-                    <h:inputHidden id="der_val18" value="#ffffff"/>
-                    <h:inputHidden id="inf_val18" value="#ffffff"/>
+            <p:outputLabel value="Total de superficies"/>
+            <p:inputNumber id="Num_superfices" value=""/>
 
-                    <h:inputHidden id="izq_val17" value="#ffffff"/>
-                    <h:inputHidden id="sup_val17" value="#ffffff"/>
-                    <h:inputHidden id="der_val17" value="#ffffff"/>
-                    <h:inputHidden id="inf_val17" value="#ffffff"/>
+            <p:outputLabel value="Extensión de placa"/>
+            <p:inputText id="Extension_placa" value=""/>
 
-                    <h:inputHidden id="izq_val16" value="#ffffff"/>
-                    <h:inputHidden id="sup_val16" value="#ffffff"/>
-                    <h:inputHidden id="der_val16" value="#ffffff"/>
-                    <h:inputHidden id="inf_val16" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val15" value="#ffffff"/>
-                    <h:inputHidden id="sup_val15" value="#ffffff"/>
-                    <h:inputHidden id="der_val15" value="#ffffff"/>
-                    <h:inputHidden id="inf_val15" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val14" value="#ffffff"/>
-                    <h:inputHidden id="sup_val14" value="#ffffff"/>
-                    <h:inputHidden id="der_val14" value="#ffffff"/>
-                    <h:inputHidden id="inf_val14" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val13" value="#ffffff"/>
-                    <h:inputHidden id="sup_val13" value="#ffffff"/>
-                    <h:inputHidden id="der_val13" value="#ffffff"/>
-                    <h:inputHidden id="inf_val13" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val12" value="#ffffff"/>
-                    <h:inputHidden id="sup_val12" value="#ffffff"/>
-                    <h:inputHidden id="der_val12" value="#ffffff"/>
-                    <h:inputHidden id="inf_val12" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val11" value="#ffffff"/>
-                    <h:inputHidden id="sup_val11" value="#ffffff"/>
-                    <h:inputHidden id="der_val11" value="#ffffff"/>
-                    <h:inputHidden id="inf_val11" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val21" value="#ffffff"/>
-                    <h:inputHidden id="sup_val21" value="#ffffff"/>
-                    <h:inputHidden id="der_val21" value="#ffffff"/>
-                    <h:inputHidden id="inf_val21" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val22" value="#ffffff"/>
-                    <h:inputHidden id="sup_val22" value="#ffffff"/>
-                    <h:inputHidden id="der_val22" value="#ffffff"/>
-                    <h:inputHidden id="inf_val22" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val23" value="#ffffff"/>
-                    <h:inputHidden id="sup_val23" value="#ffffff"/>
-                    <h:inputHidden id="der_val23" value="#ffffff"/>
-                    <h:inputHidden id="inf_val23" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val24" value="#ffffff"/>
-                    <h:inputHidden id="sup_val24" value="#ffffff"/>
-                    <h:inputHidden id="der_val24" value="#ffffff"/>
-                    <h:inputHidden id="inf_val24" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val25" value="#ffffff"/>
-                    <h:inputHidden id="sup_val25" value="#ffffff"/>
-                    <h:inputHidden id="der_val25" value="#ffffff"/>
-                    <h:inputHidden id="inf_val25" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val26" value="#ffffff"/>
-                    <h:inputHidden id="sup_val26" value="#ffffff"/>
-                    <h:inputHidden id="der_val26" value="#ffffff"/>
-                    <h:inputHidden id="inf_val26" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val27" value="#ffffff"/>
-                    <h:inputHidden id="sup_val27" value="#ffffff"/>
-                    <h:inputHidden id="der_val27" value="#ffffff"/>
-                    <h:inputHidden id="inf_val27" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val28" value="#ffffff"/>
-                    <h:inputHidden id="sup_val28" value="#ffffff"/>
-                    <h:inputHidden id="der_val28" value="#ffffff"/>
-                    <h:inputHidden id="inf_val28" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val55" value="#ffffff"/>
-                    <h:inputHidden id="sup_val55" value="#ffffff"/>
-                    <h:inputHidden id="der_val55" value="#ffffff"/>
-                    <h:inputHidden id="inf_val55" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val54" value="#ffffff"/>
-                    <h:inputHidden id="sup_val54" value="#ffffff"/>
-                    <h:inputHidden id="der_val54" value="#ffffff"/>
-                    <h:inputHidden id="inf_val54" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val53" value="#ffffff"/>
-                    <h:inputHidden id="sup_val53" value="#ffffff"/>
-                    <h:inputHidden id="der_val53" value="#ffffff"/>
-                    <h:inputHidden id="inf_val53" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val52" value="#ffffff"/>
-                    <h:inputHidden id="sup_val52" value="#ffffff"/>
-                    <h:inputHidden id="der_val52" value="#ffffff"/>
-                    <h:inputHidden id="inf_val52" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val51" value="#ffffff"/>
-                    <h:inputHidden id="sup_val51" value="#ffffff"/>
-                    <h:inputHidden id="der_val51" value="#ffffff"/>
-                    <h:inputHidden id="inf_val51" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val61" value="#ffffff"/>
-                    <h:inputHidden id="sup_val61" value="#ffffff"/>
-                    <h:inputHidden id="der_val61" value="#ffffff"/>
-                    <h:inputHidden id="inf_val61" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val62" value="#ffffff"/>
-                    <h:inputHidden id="sup_val62" value="#ffffff"/>
-                    <h:inputHidden id="der_val62" value="#ffffff"/>
-                    <h:inputHidden id="inf_val62" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val63" value="#ffffff"/>
-                    <h:inputHidden id="sup_val63" value="#ffffff"/>
-                    <h:inputHidden id="der_val63" value="#ffffff"/>
-                    <h:inputHidden id="inf_val63" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val64" value="#ffffff"/>
-                    <h:inputHidden id="sup_val64" value="#ffffff"/>
-                    <h:inputHidden id="der_val64" value="#ffffff"/>
-                    <h:inputHidden id="inf_val64" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val65" value="#ffffff"/>
-                    <h:inputHidden id="sup_val65" value="#ffffff"/>
-                    <h:inputHidden id="der_val65" value="#ffffff"/>
-                    <h:inputHidden id="inf_val65" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val85" value="#ffffff"/>
-                    <h:inputHidden id="sup_val85" value="#ffffff"/>
-                    <h:inputHidden id="der_val85" value="#ffffff"/>
-                    <h:inputHidden id="inf_val85" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val84" value="#ffffff"/>
-                    <h:inputHidden id="sup_val84" value="#ffffff"/>
-                    <h:inputHidden id="der_val84" value="#ffffff"/>
-                    <h:inputHidden id="inf_val84" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val83" value="#ffffff"/>
-                    <h:inputHidden id="sup_val83" value="#ffffff"/>
-                    <h:inputHidden id="der_val83" value="#ffffff"/>
-                    <h:inputHidden id="inf_val83" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val82" value="#ffffff"/>
-                    <h:inputHidden id="sup_val82" value="#ffffff"/>
-                    <h:inputHidden id="der_val82" value="#ffffff"/>
-                    <h:inputHidden id="inf_val82" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val81" value="#ffffff"/>
-                    <h:inputHidden id="sup_val81" value="#ffffff"/>
-                    <h:inputHidden id="der_val81" value="#ffffff"/>
-                    <h:inputHidden id="inf_val81" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val71" value="#ffffff"/>
-                    <h:inputHidden id="sup_val71" value="#ffffff"/>
-                    <h:inputHidden id="der_val71" value="#ffffff"/>
-                    <h:inputHidden id="inf_val71" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val72" value="#ffffff"/>
-                    <h:inputHidden id="sup_val72" value="#ffffff"/>
-                    <h:inputHidden id="der_val72" value="#ffffff"/>
-                    <h:inputHidden id="inf_val72" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val73" value="#ffffff"/>
-                    <h:inputHidden id="sup_val73" value="#ffffff"/>
-                    <h:inputHidden id="der_val73" value="#ffffff"/>
-                    <h:inputHidden id="inf_val73" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val74" value="#ffffff"/>
-                    <h:inputHidden id="sup_val74" value="#ffffff"/>
-                    <h:inputHidden id="der_val74" value="#ffffff"/>
-                    <h:inputHidden id="inf_val74" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val75" value="#ffffff"/>
-                    <h:inputHidden id="sup_val75" value="#ffffff"/>
-                    <h:inputHidden id="der_val75" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val48" value="#ffffff"/>
-                    <h:inputHidden id="sup_val48" value="#ffffff"/>
-                    <h:inputHidden id="der_val48" value="#ffffff"/>
-                    <h:inputHidden id="inf_val48" value="#ffffff"/>
+            <h:outputLabel value="sdas"/>
+            <h:inputText id="Pruebas" value=""/> 
+        </h:panelGrid>
 
-                    <h:inputHidden id="izq_val47" value="#ffffff"/>
-                    <h:inputHidden id="sup_val47" value="#ffffff"/>
-                    <h:inputHidden id="der_val47" value="#ffffff"/>
-                    <h:inputHidden id="inf_val47" value="#ffffff"/>
+        <p:spacer/>
 
-                    <h:inputHidden id="izq_val46" value="#ffffff"/>
-                    <h:inputHidden id="sup_val46" value="#ffffff"/>
-                    <h:inputHidden id="der_val46" value="#ffffff"/>
-                    <h:inputHidden id="inf_val46" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val45" value="#ffffff"/>
-                    <h:inputHidden id="sup_val45" value="#ffffff"/>
-                    <h:inputHidden id="der_val45" value="#ffffff"/>
-                    <h:inputHidden id="inf_val45" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val44" value="#ffffff"/>
-                    <h:inputHidden id="sup_val44" value="#ffffff"/>
-                    <h:inputHidden id="der_val44" value="#ffffff"/>
-                    <h:inputHidden id="inf_val44" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val43" value="#ffffff"/>
-                    <h:inputHidden id="sup_val43" value="#ffffff"/>
-                    <h:inputHidden id="der_val43" value="#ffffff"/>
-                    <h:inputHidden id="inf_val43" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val42" value="#ffffff"/>
-                    <h:inputHidden id="sup_val42" value="#ffffff"/>
-                    <h:inputHidden id="der_val42" value="#ffffff"/>
-                    <h:inputHidden id="inf_val42" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val31" value="#ffffff"/>
-                    <h:inputHidden id="sup_val31" value="#ffffff"/>
-                    <h:inputHidden id="der_val31" value="#ffffff"/>
-                    <h:inputHidden id="inf_val31" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val31" value="#ffffff"/>
-                    <h:inputHidden id="sup_val31" value="#ffffff"/>
-                    <h:inputHidden id="der_val31" value="#ffffff"/>
-                    <h:inputHidden id="inf_val31" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val32" value="#ffffff"/>
-                    <h:inputHidden id="sup_val32" value="#ffffff"/>
-                    <h:inputHidden id="der_val32" value="#ffffff"/>
-                    <h:inputHidden id="inf_val32" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val33" value="#ffffff"/>
-                    <h:inputHidden id="sup_val33" value="#ffffff"/>
-                    <h:inputHidden id="der_val33" value="#ffffff"/>
-                    <h:inputHidden id="inf_val33" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val34" value="#ffffff"/>
-                    <h:inputHidden id="sup_val34" value="#ffffff"/>
-                    <h:inputHidden id="der_val34" value="#ffffff"/>
-                    <h:inputHidden id="inf_val34" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val35" value="#ffffff"/>
-                    <h:inputHidden id="sup_val35" value="#ffffff"/>
-                    <h:inputHidden id="der_val35" value="#ffffff"/>
-                    <h:inputHidden id="inf_val35" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val36" value="#ffffff"/>
-                    <h:inputHidden id="sup_val36" value="#ffffff"/>
-                    <h:inputHidden id="der_val36" value="#ffffff"/>
-                    <h:inputHidden id="inf_val36" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val37" value="#ffffff"/>
-                    <h:inputHidden id="sup_val37" value="#ffffff"/>
-                    <h:inputHidden id="der_val37" value="#ffffff"/>
-                    <h:inputHidden id="inf_val37" value="#ffffff"/>
-                    
-                    <h:inputHidden id="izq_val38" value="#ffffff"/>
-                    <h:inputHidden id="sup_val38" value="#ffffff"/>
-                    <h:inputHidden id="der_val38" value="#ffffff"/>
-                    <h:inputHidden id="inf_val38" value="#ffffff"/>
-                </p:panel>
+        <p:panelGrid columns="16" class="panelGridCenter">
+            <h:outputLabel value="18"/>
+            <h:outputLabel value="17"/>
+            <h:outputLabel value="16"/>
+            <h:outputLabel value="15"/>
+            <h:outputLabel value="14"/>
+            <h:outputLabel value="13"/>
+            <h:outputLabel value="12"/>
+            <h:outputLabel value="11"/>
+            <h:outputLabel value="21"/>
+            <h:outputLabel value="22"/>
+            <h:outputLabel value="23"/>
+            <h:outputLabel value="24"/>
+            <h:outputLabel value="25"/>
+            <h:outputLabel value="26"/>
+            <h:outputLabel value="27"/>
+            <h:outputLabel value="28"/>
 
-                <script>
-                    function operacion(espacio, input) {
-                        var white = "#ffffff";
-                        var red = "#ff0000";
-                        var color = document.getElementById(espacio).getAttribute("fill");
-                        if (color === white) {
-                            document.getElementById(espacio).setAttribute("fill", red);
-                            document.getElementById(input).value = red;
-                        } else {
-                            document.getElementById(espacio).setAttribute("fill", white);
-                            document.getElementById(input).value = white;
-                        }
-                    };
-                </script>
-            </ui:define>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="18-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="18-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="18-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="18-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="17-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="17-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="17-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="17-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="16-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="16-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="16-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="16-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="15-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="15-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="15-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="15-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="14-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="14-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="14-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="14-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="13-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="13-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="13-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="13-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="12-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="12-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="12-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="12-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="11-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="11-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="11-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="11-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="21-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="21-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="21-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="21-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="22-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="22-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="22-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="22-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="23-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="23-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="23-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="23-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="24-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="24-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="24-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="24-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="25-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="25-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="25-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="25-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="26-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="26-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="26-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="26-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="27-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="27-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="27-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="27-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="28-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="28-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="28-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="28-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+        </p:panelGrid>
 
-        </ui:composition>
+        <p:spacer/>
 
-    </body>
+        <p:panelGrid columns="10" class="panelGridCenter">
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="55-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="55-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="55-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="55-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="54-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="54-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="54-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="54-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="53-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="53-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="53-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="53-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="52-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="52-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="52-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="52-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="51-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="51-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="51-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="51-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="61-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="61-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="61-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="61-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="62-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="62-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="62-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="62-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="63-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="63-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="63-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="63-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="64-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="64-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="64-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="64-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="65-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="65-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="65-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="65-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+
+            <h:outputLabel value="55"/>
+            <h:outputLabel value="54"/>
+            <h:outputLabel value="53"/>
+            <h:outputLabel value="52"/>
+            <h:outputLabel value="51"/>
+            <h:outputLabel value="61"/>
+            <h:outputLabel value="62"/>
+            <h:outputLabel value="63"/>
+            <h:outputLabel value="64"/>
+            <h:outputLabel value="65"/>
+        </p:panelGrid>
+
+        <p:spacer/>
+
+        <p:panelGrid columns="10" class="panelGridCenter">
+            <h:outputLabel value="85"/>
+            <h:outputLabel value="84"/>
+            <h:outputLabel value="83"/>
+            <h:outputLabel value="82"/>
+            <h:outputLabel value="81"/>
+            <h:outputLabel value="71"/>
+            <h:outputLabel value="72"/>
+            <h:outputLabel value="73"/>
+            <h:outputLabel value="74"/>
+            <h:outputLabel value="75"/>
+
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="85-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="85-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="85-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="85-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="84-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="84-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="84-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="84-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="83-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="83-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="83-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="83-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="82-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="82-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="82-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="82-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="81-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="81-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="81-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="81-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="71-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="71-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="71-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="71-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="72-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="72-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="72-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="72-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="73-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="73-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="73-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="73-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="74-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="74-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="74-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="74-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="75-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="75-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="75-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="75-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+        </p:panelGrid>
+
+        <p:spacer/>
+
+        <p:panelGrid columns="16" class="panelGridCenter">
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="48-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="48-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="48-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="48-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="47-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="47-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="47-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="47-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="46-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="46-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="46-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="46-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="45-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="45-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="45-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="45-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="44-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="44-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="44-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="44-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="43-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="43-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="43-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="43-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="42-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="42-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="42-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="42-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="41-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="41-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="41-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="41-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="31-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="31-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="31-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="31-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="32-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="32-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="32-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="32-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="33-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="33-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="33-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="33-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="34-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="34-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="34-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="34-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="35-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="35-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="35-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="35-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="36-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="36-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="36-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="36-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="37-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="37-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="37-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="37-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+            <h:panelGrid>
+                <svg width="50" height="50" viewBox="0 0 200 200">
+                    <g transform="translate(100,100)" stroke="#000" stroke-width="2">
+                        <path id="38-izquierda" d="M0 0-70 70A99 99 0 0 1-70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="38-superior" d="M0 0-70-70A99 99 0 0 1 70-70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="38-derecha" d="M0 0 70-70A99 99 0 0 1 70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                        <path id="38-inferior" d="M0 0 70 70A99 99 0 0 1-70 70Z" onclick="operacion(this.id)" value="ffffff" fill="#ffffff" />
+                    </g>
+                </svg>
+            </h:panelGrid>
+
+            <h:outputLabel value="48"/>
+            <h:outputLabel value="47"/>
+            <h:outputLabel value="46"/>
+            <h:outputLabel value="45"/>
+            <h:outputLabel value="44"/>
+            <h:outputLabel value="43"/>
+            <h:outputLabel value="42"/>
+            <h:outputLabel value="31"/>
+            <h:outputLabel value="31"/>
+            <h:outputLabel value="32"/>
+            <h:outputLabel value="33"/>
+            <h:outputLabel value="34"/>
+            <h:outputLabel value="35"/>
+            <h:outputLabel value="36"/>
+            <h:outputLabel value="37"/>
+            <h:outputLabel value="38"/>
+        </p:panelGrid>
+    </p:panel>
+
 </html>
