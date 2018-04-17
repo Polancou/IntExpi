@@ -6,17 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e14d7492-641b-4c82-a8ba-8390bc8da4a0" name="Default" comment="última versión">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/Alumno/Principal.xhtml" />
+    <list default="true" id="e14d7492-641b-4c82-a8ba-8390bc8da4a0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Alumno/Cuestionario.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/Alumno/Cuestionario.xhtml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Alumno/ExaOrofacial.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/Alumno/ExaOrofacial.xhtml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Alumno/Paciente.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/Alumno/Paciente.xhtml" />
-      <change beforePath="$PROJECT_DIR$/target/InterfazEXPI-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/InterfazEXPI-1.0-SNAPSHOT.war" />
-      <change beforePath="$PROJECT_DIR$/target/InterfazEXPI-1.0-SNAPSHOT/Alumno/Cuestionario.xhtml" afterPath="$PROJECT_DIR$/target/InterfazEXPI-1.0-SNAPSHOT/Alumno/Cuestionario.xhtml" />
-      <change beforePath="$PROJECT_DIR$/target/InterfazEXPI-1.0-SNAPSHOT/Alumno/ExaOrofacial.xhtml" afterPath="$PROJECT_DIR$/target/InterfazEXPI-1.0-SNAPSHOT/Alumno/ExaOrofacial.xhtml" />
-      <change beforePath="$PROJECT_DIR$/target/InterfazEXPI-1.0-SNAPSHOT/Alumno/Paciente.xhtml" afterPath="$PROJECT_DIR$/target/InterfazEXPI-1.0-SNAPSHOT/Alumno/Paciente.xhtml" />
-      <change beforePath="$PROJECT_DIR$/target/InterfazEXPI-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/InterfazEXPI-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,8 +64,8 @@
       <file leaf-file-name="Principal.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/Principal.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+            <state relative-caret-position="265">
+              <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -138,8 +129,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="23" />
     <option name="y" value="38" />
-    <option name="width" value="1221" />
-    <option name="height" value="672" />
+    <option name="width" value="1211" />
+    <option name="height" value="668" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -157,9 +148,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -198,13 +188,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringTarea" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
@@ -397,7 +388,10 @@
       <workItem from="1521846412051" duration="473000" />
       <workItem from="1521847234491" duration="929000" />
       <workItem from="1523166641382" duration="7203000" />
-      <workItem from="1523205658658" duration="66000" />
+      <workItem from="1523205658658" duration="647000" />
+      <workItem from="1523305719644" duration="1194000" />
+      <workItem from="1523581988078" duration="139000" />
+      <workItem from="1523596360505" duration="1108000" />
     </task>
     <task id="LOCAL-00001" summary="Ligeros cambios en la interfaz">
       <created>1521675950644</created>
@@ -413,14 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1521847090718</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="se agregó principal">
+      <created>1523206099713</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1523206099713</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18120000" />
+    <option name="totallyTimeSpent" value="21142000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="23" y="38" width="1366" height="742" extended-state="6" />
+    <frame x="23" y="38" width="1366" height="697" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -443,7 +444,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.043902438" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28214827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.295764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -469,13 +470,110 @@
     </ignored-roots>
     <MESSAGE value="Ligeros cambios en la interfaz" />
     <MESSAGE value="última versión" />
-    <option name="LAST_COMMIT_MESSAGE" value="última versión" />
+    <MESSAGE value="se agregó principal" />
+    <option name="LAST_COMMIT_MESSAGE" value="se agregó principal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/ExaOrofacial.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/Cuestionario.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/Paciente.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/Principal.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/ExaOrofacial.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/Cuestionario.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/Paciente.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/Principal.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/ExaOrofacial.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/Cuestionario.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/Paciente.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/Principal.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/ExaOrofacial.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -727,8 +825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/Alumno/Principal.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+        <state relative-caret-position="265">
+          <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
           <folding />
         </state>
       </provider>

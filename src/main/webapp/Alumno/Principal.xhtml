@@ -36,6 +36,7 @@
 
                 <p:tab id="confirm" title="Odontograma">
                     <p:panel header="Odontograma">
+                        <ui:include src="Odontograma.xhtml"/>
                         <p:commandButton value="Submit" actionListener="#{userWizard.save}" update="growl" process="@this"/>
                     </p:panel>
                 </p:tab>
